@@ -1,0 +1,38 @@
+
+
+
+.container {
+  
+    outline: 10px solid blue;
+    width: 1000px;
+    height: 1000px;
+    margin: 50px;
+   
+   
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+
+
+
+
+    align-content: stretch;
+
+   
+    
+}
+
+
+
+.squares {
+    border: solid red;    
+    box-sizing: border-box;
+    flex: 1 1 auto ;
+ 
+    
+
+
+}
+
+
+
