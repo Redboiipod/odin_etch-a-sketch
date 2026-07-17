@@ -1,15 +1,7 @@
-const container = document.querySelector(".container");
+const container = document.querySelector(".gridBox");
 
-function getRandomRgb() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  return `rgb(${r}, ${g}, ${b})`;
-}
-function create(size){
-    
-    
 
+function createGrid(size){
     for ( let i = 0; i < (size * size); i++) {      
     let squares = document.createElement("div");
             squares.classList.add("squares");
@@ -18,26 +10,30 @@ function create(size){
             squares.addEventListener("mouseenter", (e) => {
                 e.target.style.backgroundColor = getRandomRgb();
             });
-            
             container.appendChild(squares);  
-    }
+    }};
+
+createGrid(16);
+
+function getRandomRgb() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
 }
-
-
-create(16);
 
 const buttonPrompt = document.querySelector("button");
     buttonPrompt.addEventListener("click", () => {
-     
-        let userInput = prompt("Choose a grid size between 0 and 100");
+    
+        let userInput = prompt("Choose a grid size between 0 and 100.");
 
             if ((userInput > 100) || (userInput <= 0)){
-                alert("Please choose a number less than 100");
+                alert("Please choose a number less than 100.");
             }
             else {
-            const innerDivs = container.querySelectorAll("div");
+                const innerDivs = container.querySelectorAll("div");
                 innerDivs.forEach(div => div.remove());
-            create(userInput);
+                createGrid(userInput);
             }
       
     });

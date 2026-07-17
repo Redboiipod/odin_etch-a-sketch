@@ -1,29 +1,55 @@
-.container {
-  
-    outline: 5px solid blue;
+body {
+    background-color: beige;
+
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    align-items: center;
+
+}
+
+
+h1 {
+    font-family: Marker Felt, fantasy;
+    font-size: 50px;
+    color: darkblue;
+
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    font-weight: bold;
+    background-color:snow;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+
+.gridContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.gridBox {
+    outline: 5px solid darkblue;
     width: 500px;
     height: 500px;
-    /* margin: 500px; */
-   
-   
+    margin-top: 55px;
     display: flex;
     flex-flow: row wrap;
-
-
-   
-    
 }
 
 
 
 .squares {
-    border: solid red 0.5px;    
+    border: solid black 0.5px;    
     box-sizing: border-box;
     flex: 1 1 auto ;
- 
-    
-
-
 }
 
 
